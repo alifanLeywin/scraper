@@ -1,0 +1,42 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "name": "KawalDataScrapper",
+  "version": "1.2.1",
+  "manifest_version": 3,
+  "description": "Pengambil Data Otomatis dari halaman web dan ekspor ke file Excel/CSV",
+  "action": {
+    "default_icon": "kawaldata64.png"
+  },
+  "permissions": [
+    "webRequest",
+    "activeTab"
+  ],
+  "incognito": "split",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "icons": {
+    "16": "kawaldata16.png",
+    "32": "kawaldata32.png",
+    "64": "kawaldata64.png",
+    "128":"kawaldata128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "css": [
+        "onload.css"
+      ],
+      "js": [
+        "js/jquery-3.1.1.min.js",
+        "js/sha256.min.js",
+        "onload.js"
+      ]
+    }
+  ]
+}

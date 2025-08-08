@@ -1,0 +1,214 @@
+/* Layout dan Tampilan Dasar */
+body {
+  padding-top: 15px;
+  background: #f7f9fc;
+  color: #0D47A1;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn, #delay, .alert {
+  margin: 5px;
+}
+
+form {
+  margin-right: -5px;
+  margin-left: 5px;
+}
+
+.alert {
+  display: none;
+}
+
+.equal-height {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.equal-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+}
+
+.card-rounded {
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 15px;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #1976d2, #0d47a1);
+  color: #fff;
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 6px 16px rgba(13,71,161,.2);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.logo-bulat {
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn {
+  background-color: #0D47A1;
+  color: white;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #1565C0;
+}
+
+#tableTitle {
+  max-width: 100%;
+  width: 360px;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+/* Loading */
+.loading-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 30px;
+  max-width: 320px;
+  text-align: center;
+}
+
+.loading-card img {
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+.loading-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0D47A1;
+  margin-bottom: 5px;
+}
+
+.loading-card p {
+  font-size: 14px;
+  color: #607D8B;
+  margin: 0;
+}
+
+#wait {
+  margin: 20px;
+  text-align: center;
+}
+
+/* Table wrapper dengan tinggi tetap */
+#table-wrapper {
+  margin-top: 20px;
+  height: 500px;
+  overflow: auto;
+  background: white;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Tabel Handsontable */
+#hot {
+  width: 100%;
+  height: 100% !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#help {
+  float: right;
+  margin-right: 5px;
+}
+
+.hot-header {
+  position: relative;
+}
+
+.remove-column {
+  position: absolute;
+  right: 0;
+}
+
+#stats {
+  margin-top: 50px;
+}
+
+#info {
+  margin-top: 10px;
+}
+#hot {
+  table-layout: fixed !important;
+  word-wrap: break-word !important;
+}
+/* Tetapkan lebar minimum dan tinggi tombol agar stabil */
+.btn {
+  min-width: 150px;
+  min-height: 40px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* Pastikan grid tombol kiri dan kanan tetap sejajar */
+.equal-card > .card-rounded {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.equal-card {
+  min-width: 250px;
+  max-width: 100%;
+}
+.equal-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  min-height: 100%;
+}
+
+.card-rounded {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
+  min-height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}

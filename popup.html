@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>KawalDataScrapper</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/handsontable.full.min.css">
+    <link rel="stylesheet" href="popup.css"> <!-- Ini akan pakai file CSS di bawah -->
+  </head>
+  <body>
+    <!-- LOADING -->
+    <div id="wait" class="loading-wrapper">
+      <div class="loading-card">
+        <img src="kawaldatalogo.png" alt="Logo Loading" />
+        <h3>Mohon tunggu...</h3>
+        <p>Data sedang diambil</p>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <div class="container-fluid">
+      <div class="app-header text-center">
+        <img src="kawaldata.png" alt="KawalData Logo" class="logo-bulat mb-2" />
+        <h3 class="m-0 fw-semibold">
+          <input type="text" id="tableTitle" class="form-control form-control-sm text-center" value="Data Scraper" />
+        </h3>
+        <div class="small opacity-75">Scrape • Preview • Edit • Download</div>
+      </div>
+    </div>
+
+    <!-- BODY CONTENT -->
+    <div class="container-fluid equal-height">
+      <!-- LEFT CARD -->
+      <div class="equal-card card-rounded">
+        <button class="btn btn-primary btn-block mb-2" id="wrongTable">Coba Tabel Lain</button>
+        <button class="btn btn-primary btn-block mb-2" id="nextButton">Temukan Tombol 'Berikutnya'</button>
+        <button class="btn btn-primary btn-block mb-3" id="startScraping">Mulai Menelusuri</button>
+
+        <div class="form-check text-left mb-2">
+          <input type="checkbox" id="infinateScroll">
+          <label for="infinateScroll" id="infinateScrollLabel">Scroll Otomatis</label>
+        </div>
+
+        <form>
+          <div class="input-group mb-2">
+            <span class="input-group-addon">Delay Terendah</span>
+            <input id="crawlDelay" type="number" value="1" class="form-control" />
+            <span class="input-group-addon">Detik</span>
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon">Delay Tertinggi</span>
+            <input id="maxWait" type="number" value="20" class="form-control" />
+            <span class="input-group-addon">Detik</span>
+          </div>
+        </form>
+      </div>
+
+      <!-- RIGHT CARD -->
+      <div class="equal-card">
+        <div class="card-rounded mb-3">
+          <button class="btn btn-success btn-block mb-2" id="csv">CSV</button>
+          <button class="btn btn-success btn-block mb-2" id="xlsx">XLSX</button>
+          <button class="btn btn-success btn-block" id="copy">COPY SEMUA</button>
+        </div>
+
+        <div class="card-rounded">
+          <div id="stats"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HANDSONTABLE -->
+    <div id="table-wrapper" class="col-xs-12">
+      <div id="hot" class="hot handsontable htRowHeaders htColumnHeaders"></div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/papaparse.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/FileSaver.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/handsontable.full.min.js"></script>
+    <script src="js/xlsx.full.min.js"></script>
+    <script src="popup.js" type="module"></script>
+  </body>
+</html>
